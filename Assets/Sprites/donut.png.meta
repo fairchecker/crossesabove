@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: b378255125a65894295f6cea2a69c5b8
+guid: ffa77a42dcac9cd4090a90a687a54f4f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6722470597474700051
-    second: goodtile_0
-  - first:
-      213: -7974775430331969560
-    second: goodtile_1
-  - first:
-      213: -1537174909660977721
-    second: goodtile_2
-  - first:
-      213: -5402485087602975942
-    second: goodtile_3
+      213: 1352961961597019730
+    second: donut_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,6 +97,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -131,74 +135,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: goodtile_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 27
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: de43388db9cf4b2a0800000000000000
-      internalID: -6722470597474700051
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: goodtile_1
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 17
-        width: 15
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8efcc8f8ff7e35190800000000000000
-      internalID: -7974775430331969560
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: goodtile_2
+      name: donut_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 15
-        height: 15
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,30 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7c5a300609bdaaae0800000000000000
-      internalID: -1537174909660977721
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: goodtile_3
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 0
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a3b5419bf648605b0800000000000000
-      internalID: -5402485087602975942
+      spriteID: 2562b9b5cbfa6c210800000000000000
+      internalID: 1352961961597019730
       vertices: []
       indices: 
       edges: []
@@ -248,11 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      goodtile_0: -6722470597474700051
-      goodtile_1: -7974775430331969560
-      goodtile_2: -1537174909660977721
-      goodtile_3: -5402485087602975942
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
