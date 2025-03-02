@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using Unity.Cinemachine;
 using View;
@@ -15,7 +16,7 @@ public class EntryPoint : MonoBehaviour
         Instantiate(tileMap, mainGrid.transform);
         Instantiate(wallMap, mainGrid.transform);
         var actorObject = Instantiate(actor);
-        actorObject.GetComponent<CharacterView>().Initialize();
+        actorObject.GetComponent<CharacterView>().Initialize(1f);
         
         cinemachineCamera.Follow = actorObject.transform;
     }
