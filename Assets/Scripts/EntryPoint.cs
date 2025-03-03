@@ -1,4 +1,5 @@
 using System.Security.Cryptography.X509Certificates;
+using Model;
 using UnityEngine;
 using Unity.Cinemachine;
 using View;
