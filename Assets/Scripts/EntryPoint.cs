@@ -16,7 +16,7 @@ public class EntryPoint : MonoBehaviour
         Instantiate(tileMap, mainGrid.transform);
         Instantiate(wallMap, mainGrid.transform);
         var actorObject = Instantiate(actor);
-        actorObject.GetComponent<CharacterView>().Initialize(1f);
+        actorObject.GetComponent<CharacterView>().Initialize(0.5f);
         
         cinemachineCamera.Follow = actorObject.transform;
     }
