@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class SlidersController : MonoBehaviour
 {
-    [SerializeField]private Image hp_bar, mana_bar, stamina_bar;
+    private Image hp_bar, mana_bar, stamina_bar;
     // TODO : Сделать взятие максимального хп у персонажа
     private float max_hp = 100, max_mana = 10, max_stamina = 50;
     private void Awake()

@@ -5,18 +5,13 @@ using System.Collections;
 
 public class TextScript : MonoBehaviour
 {
-    private bool textcomplete = true;
+    public bool textcomplete = true;
     private TextMeshProUGUI TextObject;
     private void Awake()
     {
         TextObject = transform.Find("Panel").Find("Text").GetComponent<TextMeshProUGUI>();
     }
-
-    private void Start()
-    {
-        SayText("\"KINDNESS BRINGS MORE KINDNESS,\"\r\n\"AVOID CONFRONTATION,\"\r\n\"CONFLICT BEGETS CONFLICT.\"");
-    }
-    public void SayText(string text)
+    public void SayText(string text = "")
     {
         TextObject.text = "";
         StartCoroutine("AddText", text);
