@@ -56,22 +56,30 @@ public class DialogController : MonoBehaviour
         options.Reverse();
         for (int i = 0; i < options.Count; i++)
         {
-            GameObject tmp = new GameObject();
-            tmp.transform.SetParent(transform);
-            tmp.AddComponent<RectTransform>();
-            tmp.transform.localPosition = new Vector3(800, -112.5f + i * 75, 0);
-            tmp.GetComponent<RectTransform>().sizeDelta = new Vector2(200, 60);
-            tmp.AddComponent<Image>(); 
-            tmp.AddComponent<Button>();
-            tmp.GetComponent<Image>().sprite = Resources.Load<Sprite>("unity_builtin_extra");
-            GameObject _text = new GameObject();
-            _text.transform.SetParent(tmp.transform);
-            _text.AddComponent<TextMeshProUGUI>();
-            _text.GetComponent<TextMeshProUGUI>().text = options[i].text;
-            _text.transform.localPosition = Vector3.zero;
-            _text.GetComponent<TextMeshProUGUI>().color = Color.black; 
-            _text.GetComponent<TextMeshProUGUI>().enableAutoSizing = true;
-            bt_obj.Add(tmp);
+            var text = options[i].text;
+            float position = -112.5f + i * 75;
+            CreateChoiceButton(text, position);
         }
+    }
+
+    private GameObject CreateChoiceButton(string text, float position)
+    {
+        var button = new GameObject();
+        button.transform.SetParent(transform);
+        button.AddComponent<RectTransform>();
+        button.transform.localPosition = new Vector3(800, position, 0);
+        button.GetComponent<RectTransform>().sizeDelta = new Vector2(200, 60);
+        button.AddComponent<Image>(); 
+        button.AddComponent<Button>();
+        button.GetComponent<Image>().sprite = Resources.Load<Sprite>("");
+        var textObject = new GameObject();
+        textObject.transform.SetParent(button.transform);
+        textObject.AddComponent<TextMeshProUGUI>();
+        textObject.GetComponent<TextMeshProUGUI>().text = text;
+        textObject.transform.localPosition = Vector3.zero;
+        textObject.GetComponent<TextMeshProUGUI>().color = Color.black; 
+        textObject.GetComponent<TextMeshProUGUI>().enableAutoSizing = true;
+        bt_obj.Add(button);
+        return button;
     }
 }
