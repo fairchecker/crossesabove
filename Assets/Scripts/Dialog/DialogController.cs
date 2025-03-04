@@ -38,6 +38,7 @@ public class DialogController : MonoBehaviour
     }
     public void NextText()
     {
+        if (!textScript.textcomplete) { textScript.speed_up = true; return; }
         string text = dialog.ContinueStory();
         switch (text)
         {
@@ -52,17 +53,17 @@ public class DialogController : MonoBehaviour
 
     private void Choise()
     {
+        if (bt_obj.Count != 0) return;
         List<Ink.Runtime.Choice> options = dialog.GetChoices();
-        options.Reverse();
         for (int i = 0; i < options.Count; i++)
         {
             var text = options[i].text;
             float position = -112.5f + i * 75;
-            CreateChoiceButton(text, position);
+            CreateChoiceButton(text, position, i);
         }
     }
 
-    private GameObject CreateChoiceButton(string text, float position)
+    private GameObject CreateChoiceButton(string text, float position, int id)
     {
         var button = new GameObject();
         button.transform.SetParent(transform);
@@ -79,7 +80,16 @@ public class DialogController : MonoBehaviour
         textObject.transform.localPosition = Vector3.zero;
         textObject.GetComponent<TextMeshProUGUI>().color = Color.black; 
         textObject.GetComponent<TextMeshProUGUI>().enableAutoSizing = true;
+        var bt = button.GetComponent<Button>();
+        bt.onClick.AddListener(() => GetResult(id));
         bt_obj.Add(button);
         return button;
+    }
+    void GetResult(int id)
+    {
+        foreach (var gameObject in bt_obj)
+        Destroy(gameObject);
+        dialog.ChooseChoice(id);
+        NextText();
     }
 }
