@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textcomplete: 1
+  speed_up: 0
 --- !u!114 &103000946
 MonoBehaviour:
   m_ObjectHideFlags: 0
